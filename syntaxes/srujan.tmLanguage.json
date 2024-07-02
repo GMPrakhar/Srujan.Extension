@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "सृजन ",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"types": {
+			"patterns": [{
+				"name": "storage.type.cs",
+				"match": "\\b(अंक|अक्षर|तार|दशमलव)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control",
+				"match": "\\b(विराम|प्रवेश|अगर|तो|या|जबतक|दिखाएँ|उत्तर)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.srujan",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.srujan",
+					"match": "\\\\."
+				}
+			]
+		},
+		"number": {
+			"patterns": [{
+				"name": "constant.numeric.srujan",
+				"match": "\\b(\\d+(\\.\\d+)?)\\b"
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.name",
+				"match": "\\b(\\w+)\\b"
+			}]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.line",
+				"match": "//.*"
+			}]
+		}
+	},
+	"scopeName": "source.सृ"
+}
